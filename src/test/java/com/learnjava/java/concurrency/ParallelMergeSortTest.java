@@ -5,6 +5,7 @@
  */
 package com.learnjava.java.concurrency;
 
+import com.learnjava.concurrency.ParallelMergeSort;
 import java.util.Random;
 import org.junit.After;
 import org.junit.AfterClass;

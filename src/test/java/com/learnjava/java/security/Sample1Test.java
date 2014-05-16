@@ -5,6 +5,7 @@
  */
 package com.learnjava.java.security;
 
+import com.learnjava.security.Sample1;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
