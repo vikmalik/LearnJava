@@ -1,5 +1,6 @@
 package com.learnjava.lambda;
 
+import com.learnjava.bean.Person;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

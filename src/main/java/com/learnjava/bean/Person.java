@@ -1,4 +1,4 @@
-package com.learnjava.lambda;
+package com.learnjava.bean;
 
 import java.io.Serializable;
 
