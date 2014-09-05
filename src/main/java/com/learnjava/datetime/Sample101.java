@@ -15,8 +15,8 @@ import java.time.LocalTime;
 import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalField;
+import java.time.format.DateTimeFormatter;
+import java.util.Set;
 
 /**
  *
@@ -28,6 +28,9 @@ public class Sample101 {
         System.out.println("maximum Date Supported = "+ localDate);
         
         localDate = LocalDate.of(2014,12,21);
+        System.out.println("Date is " + localDate);
+        
+        localDate = LocalDate.now();
         System.out.println("Date is " + localDate);
         
         try{
@@ -63,5 +66,15 @@ public class Sample101 {
         System.out.println("Duration between Local Datetime  and now is " + duration);
 
         System.out.println("Last Date of month of local Date is : " + localDate.with(java.time.temporal.TemporalAdjusters.lastDayOfMonth()));
+        
+        
+        Set<String> zoneIdList = java.time.ZoneId.getAvailableZoneIds();
+        System.out.println("List of Zone Ids:");
+        zoneIdList.stream().forEach((zoneId) -> {
+            System.out.println(zoneId);
+        });
+        
+        System.out.println("DetaultTimeZone = "+ java.time.ZoneId.systemDefault().toString());
+        
     }
 }
