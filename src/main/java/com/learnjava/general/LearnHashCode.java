@@ -15,18 +15,6 @@ public class LearnHashCode {
     }
 
     public void doMain(String[] args) throws IOException {
-        System.out.printf("true ^ true = %b\n", true ^ true);
-        System.out.printf("true ^ false = %b\n", true ^ false);
-        System.out.printf("false ^ false = %b\n", false ^ false);
-        
-        long i = 1;
-        System.out.printf("1>>>32 = %s :: %s :: %s\n",
-                Long.toBinaryString(i),
-                Long.toBinaryString(i >>> 32),
-                Long.toBinaryString((i ^ (i >>> 32))));
-        
-        
-
         populateData(0);
         populateData(1);
         populateData(Integer.MAX_VALUE);

@@ -18,5 +18,15 @@ public class BitwiseOperatorExample1 {
         System.out.println("i>>-"+ 1 +"  : " + ((-i)>>1));
         System.out.println("i<<"+ 1 +"   : " + (i<<1));
         System.out.println("i<<-"+ 1 +"  : " + ((-i)<<1)); 
+        
+        
+        System.out.printf("true ^ true = %b\n", true ^ true);
+        System.out.printf("true ^ false = %b\n", true ^ false);
+        System.out.printf("false ^ false = %b\n", false ^ false);
+
+        System.out.printf("1>>>32 = %s :: %s :: %s\n",
+                Long.toBinaryString(i),
+                Long.toBinaryString(i >>> 32),
+                Long.toBinaryString((i ^ (i >>> 32))));
     }
 }
