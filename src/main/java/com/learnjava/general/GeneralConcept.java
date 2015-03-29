@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.learnjava.general;
 
 /**
@@ -12,7 +7,9 @@ package com.learnjava.general;
 public class GeneralConcept {
     
     public static void main(String... args){
-        Integer i;
+        
+        int i = 0010;
+        System.out.println("final value" + i);
     }
     
 }
