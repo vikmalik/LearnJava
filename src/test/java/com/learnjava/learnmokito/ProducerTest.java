@@ -51,7 +51,7 @@ public class ProducerTest {
     public void testProduceMethod() throws Exception {
         System.out.println("produceMethod");
         Producer instance = new Producer("test");
-        String expResult = "test";
+        String expResult = "dbtest";
         String result = instance.produceMethod();
         assertEquals(expResult, result);
     }

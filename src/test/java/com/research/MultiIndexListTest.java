@@ -117,7 +117,7 @@ public class MultiIndexListTest {
     @Test
     public void testPerformance_Obj_Ref() {
 	System.out.println("testPerformance_Obj_Ref()");
-	for (int i = 100; i <= 100000; i *= 10) {
+	for (int i = 100; i <= 1000; i *= 10) {
 	    performanceTest(i);
 	}
 	assertEquals(true, true);

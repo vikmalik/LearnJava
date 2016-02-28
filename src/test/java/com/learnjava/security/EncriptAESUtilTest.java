@@ -46,19 +46,5 @@ public class EncriptAESUtilTest {
         assertArrayEquals(expResult, result);
     }
 
-    /**
-     * Test of decryptText method, of class EncriptAESUtil.
-     */
-    @Test
-    public void testDecryptText() {
-        System.out.println("decryptText");
-        String encryptedText = "";
-        EncriptAESUtil instance = new EncriptAESUtil();
-        String expResult = "";
-        String result = instance.decryptText(encryptedText);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
     
 }

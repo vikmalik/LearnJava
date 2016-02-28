@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.experimental.theories.Theory;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -102,7 +103,7 @@ public class ConsumerTest {
         assertEquals(expResult, result);
     }
     
-    @Test
+    @Test (expected=ArithmeticException.class)
     public void testConsumerMethod_withMock_checkUnexpectedExceptionHandling() {
         System.out.println("testConsumerMethod_withMock_checkUnexpectedExceptionHandling");
         Consumer instance = new Consumer();
@@ -111,8 +112,7 @@ public class ConsumerTest {
         ArithmeticException arithmeticException = mock(ArithmeticException.class);
         when(instance.consumerMethod(producer)).thenThrow(arithmeticException);
         
-        int result = instance.consumerMethod(producer);
-        assertEquals(expResult, result);
+        instance.consumerMethod(producer);
     }
 
 }
