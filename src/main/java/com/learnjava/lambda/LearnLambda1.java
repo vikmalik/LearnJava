@@ -29,7 +29,9 @@ public class LearnLambda1 {
 
         List<Person> list = populateListData();
         //printListData(list);
-        System.out.println("Number of person having age > 21 = " + getPersonCount(list, 21));
+        System.out.println("getPersonCount(): Number of person having age > 21 = " + getPersonCount(list, 21));
+        
+        System.out.println("getPersonCountMoreThanGivenAge(): Number of person having age > 21 = " + getPersonCountMoreThanGivenAge(list, 21));
 
         Person person = getPersonWithMaxAge(list);
         System.out.println("Person with Maximum Age :: " + person);
@@ -62,6 +64,9 @@ public class LearnLambda1 {
 
     private int getPersonCount(List<Person> list, int age) {
         return list.stream().filter((it) -> it.getAge() >= age).mapToInt((it) -> 1).sum();
+    }
+    private long getPersonCountMoreThanGivenAge(List<Person> list, int age) {
+        return list.stream().filter((it) -> it.getAge() >= age).count();
     }
 
     private Person getPersonWithMaxAge(List<Person> list) {

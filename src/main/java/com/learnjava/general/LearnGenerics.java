@@ -1,5 +1,6 @@
 package com.learnjava.general;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,8 +56,7 @@ public class LearnGenerics {
         lD.add(d);
         method1(lD);
         //incompatible types: ArrayList<D> cannot be converted to List<? super C>
-        //method2(lD);
-
+        //method2(lD);        
     }
 
     private static void method1(List<? extends C> l) {
